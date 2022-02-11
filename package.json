@@ -1,0 +1,32 @@
+{
+  "name": "notes",
+  "version": "0.0.1",
+  "description": "notes app",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "ts": "tsc --watch -p ./tools/tsconfig.server.json",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "test": "jest",
+    "client-build": "cross-env NODE_ENV=production webpack --mode production",
+    "server-build": "tsc -p ./tools/tsconfig.server.json",
+    "serve": "nodemon ./build/main.js",
+    "start": "node ./build/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Horrorspace/Notes.git"
+  },
+  "keywords": ["typescript"],
+  "author": {
+    "name": "eugenii",
+    "email": "utkineugeniy@gmail.com"
+  },
+  "license": "SEE LICENSE IN <LICENSE>",
+  "bugs": {
+    "url": "https://github.com/Horrorspace/Notes/issues"
+  },
+  "homepage": "https://github.com/Horrorspace/Notes#readme"
+}
