@@ -1,6 +1,9 @@
 # node modules
 node_modules
 
+# environment variables
+*.env
+
 # compiled output
 build
 tsconfig.tsbuildinfo
