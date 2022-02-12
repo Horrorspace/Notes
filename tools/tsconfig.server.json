@@ -1,5 +1,39 @@
 {
-  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": ["DOM", "DOM.Iterable", "ES6", "ESNext"],
+    "jsx": "react",
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false,
+    "outDir": "../build",
+    "rootDir": "../src/server",
+    "removeComments": true,
+    "noEmit": false,
+    "isolatedModules": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "baseUrl": "../src",
+    "paths": {
+      "@aliases/*": ["client/types/aliases/*"],
+      "@api/*": ["client/api/*"],
+      "@config/*": ["client/config/*"],
+      "@core/*": ["client/core/*"],
+      "@interfaces/*": ["client/types/interfaces/*"],
+      "@lang/*": ["client/lang/*"],
+      "@modules/*": ["client/modules/*"],
+      "@store/*": ["client/store/*"],
+      "@styles/*": ["client/assets/styles/*"],
+      "@ui/*": ["client/ui/*"],
+      "@utils/*": ["client/utils/*"],
+      "@server/*": ["server/*"]
+    },
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true
+  },
   "exclude": ["../tsconfig.json", "../build"],
   "include": ["../src/server/**/*", "../src/server/**/**/*"]
 }
