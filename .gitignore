@@ -1,0 +1,17 @@
+# node modules
+node_modules
+
+# compiled output
+build
+tsconfig.tsbuildinfo
+package-lock.json
+*.css
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Tests
+/coverage
+/.nyc_output
